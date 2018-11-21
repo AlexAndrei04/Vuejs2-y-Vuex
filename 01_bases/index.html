@@ -5,6 +5,8 @@
     <title>Bases de Vuejs</title>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
+    <script src="./components/directives/focus.js"></script>
+    <script src="./components/directives/change-styles.js"></script>
     <script src="./components/messages.js"></script>
     <script src="./components/computed-properties.js"></script>
     <script src="./components/methods.js"></script>
@@ -18,10 +20,17 @@
     <script src="./components/loops.js"></script>
     <script src="./components/conditionals.js"></script>
     <script src="./components/slots.js"></script>
+    <script src="./components/watchers.js"></script>
+    <script src="./components/computed-properties-get-set.js"></script>
+    <script src="./components/dynamic-components/cmp1.js"></script>
+    <script src="./components/dynamic-components/cmp2.js"></script>
+    <script src="./components/dynamic-components/cmp3.js"></script>
+    <script src="./components/load-dynamic-components.js"></script>
+    <script src="./components/mixins.js"></script>
   </head>
   <body>
     <div id="app" style="margin-bottom: 100px;">
-      <message></message>
+      <message v-change-styles="{ bgc: 'red', c: 'white' }"></message>
       <computed></computed>
       <vmodel></vmodel>
       <vmodel-checkboxes></vmodel-checkboxes>
@@ -41,6 +50,10 @@
           <h3>Footer del layout con Slots</h3>
         </template>
       </slots>
+      <watchers></watchers>
+      <computed-get-set></computed-get-set>
+      <load-dynamic-components></load-dynamic-components>
+      <mixins></mixins>
     </div>
     <script>
       new Vue({
